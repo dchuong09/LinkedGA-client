@@ -6,7 +6,7 @@ import setAuthToken from './utils/setAuthToken';
 import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import Profile from './pages/Profile';
-// import Signup from './pages/Signup';
+import Signup from './pages/Signup';
 // import Login from './pages/Login';
 
 class App extends Component {
@@ -34,7 +34,7 @@ class App extends Component {
     if (localStorage.getItem('jwtToken') !== null) {
       localStorage.removeItem('jwtToken');
       this.setState({ currentUser: null, isAuthenticated: false });
-      <Redirect to='/' />;
+      // <Redirect to='/' />;
     }
   }
 
@@ -47,7 +47,7 @@ class App extends Component {
     //         : <Redirect to='/login' />
     //     )} />
     // }
-           // <Route path='/signup' component={Signup} />
+
             // <Route path='/login' render={ (props) => <Login {...props} setCurrentUser={this.setCurrentUser} /> } />
     return (
       <div className="">
@@ -55,7 +55,7 @@ class App extends Component {
         <main>
           <Switch>
             <Route exact path='/' component={HomePage} />
- 
+            <Route path='/signup' component={Signup} />
             <Route path='/profile' component={Profile} />
           </Switch>
         </main>
