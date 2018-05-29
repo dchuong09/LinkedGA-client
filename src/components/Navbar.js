@@ -12,7 +12,7 @@ const Navbar = (props) => {
 			     	props.isAuthed 
 				      	?   <ul id="nav-mobile" className="right hide-on-med-and-down">
 				      			<li><Link to='/profile'>Profile</Link></li>
-				      			<li><span onClick={props.handleLogout} to='/'>Logout</span></li>
+				      			<li><Link onClick={props.handleLogout} to='/'>Logout</Link></li>
 				      		</ul>
 				      	:   <ul id="nav-mobile" className="right hide-on-med-and-down">
 				      			<li><Link to='/signup'>Signup</Link></li>

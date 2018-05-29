@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
+import '../styles/materialize-social.css';
 
 class Signup extends Component {
 	state = {
 		name: '',
 		email: '',
+		location: '',
+		github: '',
 		password: '',
 		password2: '',
 	}
@@ -50,6 +53,20 @@ class Signup extends Component {
 									<i className="material-icons prefix">email</i>
 									<input id="user_email" type="email" className="validate" name="email" value={this.state.email} onInput={this.handleChange} />
 									<label htmlFor="user_email" className="center-align">Email</label>
+								</div>
+							</div>
+							<div className="row margin">
+								<div className="input-field col s12">
+									<i className="material-icons prefix">place</i>
+									<input id="user_location" type="text" className="validate" name="location" value={this.state.location} onInput={this.handleChange} />
+									<label htmlFor="user_email" className="center-align">Location</label>
+								</div>
+							</div>
+							<div className="row margin">
+								<div className="input-field col s12">
+									<i className="material-icons prefix">computer</i>
+									<input id="user_github" type="text" className="validate" name="github" value={this.state.github} onInput={this.handleChange} />
+									<label htmlFor="user_email" className="center-align">Github</label>
 								</div>
 							</div>
 							<div className="row margin">
