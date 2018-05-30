@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {Switch, Route, Redirect} from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
 import setAuthToken from './utils/setAuthToken';
-
 import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import Profile from './pages/Profile';

@@ -25,6 +25,8 @@ class Signup extends Component {
 			const newUser = {
 				name: this.state.name,
 				email: this.state.email,
+				location: this.state.location,
+				github: this.state.github,
 				password: this.state.password,
 			}
 
