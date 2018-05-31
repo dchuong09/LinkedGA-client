@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
+import Chatroom from './pages/Chatroom';
 
 class App extends Component {
   state = {
@@ -56,8 +57,9 @@ class App extends Component {
           <Switch>
             <Route exact path='/' component={HomePage} />
             <Route path='/signup' component={Signup} />
+            <Route path='/chatroom' component={Chatroom} />
             <Route path='/login' render={ (props) => <Login {...props} setCurrentUser={this.setCurrentUser} /> } />
-            <PrivateRoute path='/profile' component={Profile} />
+            <PrivateRoute path='/profile' component={Profile}  />
           </Switch>
         </main>
       </div>

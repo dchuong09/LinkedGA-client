@@ -10,26 +10,32 @@ class Profile extends Component {
 	componentDidMount = () => {
 		axios.get('http://localhost:8080/api/users/current')
 		  // .then(res => this.setState({ user: res.data }))
-		  .then(res => console.log(res.data))
+		  .then(res => this.setState({user: res.data}))
 		  .catch(err => console.log(err));
 	}
 
 
 	render() {
-		
+		console.log('user', this.state.user)
+
 		return (
 			<div>
 				<div className='row'>
-					<div className='col s3 offset-s1'>
-						<div className='image-container'></div>
-						<div>
+					<div className='profile'>
+						<div className='col s3 offset-m3'>
+							<div className='image-container'></div>
+						</div>
+						<div className='col s4'>
 							<h4>Chuong D Dao</h4>
+							<p>Github:</p>
+							<p>https://github.com/dchuong09</p>
+							<p>Location: San Francisco</p>
 						</div>
 					</div>
-					<div className='col s8'>
-						<div className=''>
-							<h4>Profile</h4>
-						</div>
+				</div>
+				<div className='row'>
+					<div className='col s3 offset-m3'>
+						<h4>Skills:</h4>
 					</div>
 				</div>
 			</div>
