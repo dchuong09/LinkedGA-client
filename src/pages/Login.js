@@ -34,7 +34,7 @@ class Login extends Component {
 		  	const decoded = jwt_decode(token);
 		  	// Set current user
 		  	this.props.setCurrentUser(decoded);
-		  	this.props.history.push('/profile');
+		  	this.props.history.push('/');
 		  })
 		  .catch(err => console.log(err));
 	}

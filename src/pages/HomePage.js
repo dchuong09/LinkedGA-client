@@ -7,7 +7,7 @@ class HomePage extends Component {
 		users: ''
 	}
 
-	
+
 
 
 	componentDidMount() {
@@ -30,7 +30,8 @@ class HomePage extends Component {
 					          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sCRzU2nT84Jzch54d2jiMoZbzXdMuEPR78kR0m05Mkl-FfKF" />
 					        </div>
 					        <div className="card-content">
-					          <p>{user.name}</p>
+					          <p><Link to={`/${user._id}`}>{user.name}</Link></p>
+					          <p>{user.location}</p>
 					        </div>
 					      </div>
 					    </div>

@@ -8,6 +8,8 @@ import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Chatroom from './pages/Chatroom';
+import DetailPage from './pages/DetailPage';
+
 
 class App extends Component {
   state = {
@@ -44,7 +46,7 @@ class App extends Component {
     const PrivateRoute = ({component: Component, ...rest}) => (
       <Route {...rest} render={(props) => (
         this.state.isAuthenticated === true
-          ? <Component {...props} />
+          ? <Component {...props} user={this.state.currentUser}  />
           : <Redirect to='/login' />
       )} />
     )
@@ -52,14 +54,15 @@ class App extends Component {
 
     return (
       <div className="">
-        <Navbar handleLogout={this.handleLogout} isAuthed={this.state.isAuthenticated} />
+        <Navbar handleLogout={this.handleLogout} isAuthed={this.state.isAuthenticated} user={this.state.currentUser} />
         <main>
           <Switch>
             <Route exact path='/' component={HomePage} />
             <Route path='/signup' component={Signup} />
-            <Route path='/chatroom' component={Chatroom} />
             <Route path='/login' render={ (props) => <Login {...props} setCurrentUser={this.setCurrentUser} /> } />
-            <PrivateRoute path='/profile' component={Profile}  />
+            <Route path='/chatroom' component={Chatroom} />
+            <Route exact path='/:user_id' component={DetailPage} />
+            <PrivateRoute path='/:user_id/profile' component={Profile}  />
           </Switch>
         </main>
       </div>
