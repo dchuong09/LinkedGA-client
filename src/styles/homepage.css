@@ -1,0 +1,20 @@
+.userCards {
+	display: inline-block;
+	margin-top: 1em;
+}
+.card-content {
+    height: 70px;
+
+}
+
+.location {
+	color: #cccccc;
+}
+.namee {
+	font-family: 'Quicksand', sans-serif;
+	color: black;
+}
+.cardInfo {
+	margin-top: -10px;
+	margin-left: 25px;
+}

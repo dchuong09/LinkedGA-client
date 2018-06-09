@@ -5,7 +5,7 @@ const Navbar = (props) => {
 	return (
 		<div>
 			<nav>
-			    <div className="nav-wrapper">
+			    <div className="nav-wrapper #01579b light-blue darken-4">
 			      <Link to='/' className="brand-logo">LinkedGA</Link>
 
 			      {

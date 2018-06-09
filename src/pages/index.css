@@ -3,15 +3,11 @@
 	height: 45vh;
 }
 
-.course {
-	color: #808080;
-}
-
 .profileImg {
 	display: block;
     border-radius: 200px;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     box-sizing: border-box;
     background-color: #DDD;
     border: 5px solid #cfd8dc;
@@ -21,30 +17,8 @@
 
 main {
 	margin-bottom: 10em;
-	font-family: 'Bitter', serif;
 }
 
 .material-icons, .icon-text {
 	vertical-align: middle;
-}
-.createProjectForm {
-	margin: 2em;
-}
-.projects {
-	display: inline-block;
-}
-.card{
-	margin-top: 2em;
-}
-.card-content {
-	font-family: 'Anton', sans-serif;
-	text-align: center;
-	height: 70px;
-    width: 200px;
-}
-.github {
-	text-align: right;
-}
-.course {
-	margin-bottom: 500em;
 }
